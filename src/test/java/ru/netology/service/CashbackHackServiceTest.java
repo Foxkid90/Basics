@@ -1,7 +1,8 @@
 package ru.netology.service;
 
-import org.junit.jupiter.api.Assertions;
-import org.junit.jupiter.api.Test;
+
+import org.junit.Assert;
+import org.junit.Test;
 
 public class CashbackHackServiceTest {
 
@@ -13,7 +14,7 @@ public class CashbackHackServiceTest {
         int expected = 1;
         int actual = service.remain(999);
 
-        Assertions.assertEquals(expected, actual);
+        Assert.assertEquals(expected, actual);
     }
 
     // Сумма выше порогового значения: не кратная 1000
@@ -24,7 +25,7 @@ public class CashbackHackServiceTest {
         int expected = 999;
         int actual = service.remain(1001);
 
-        Assertions.assertEquals(expected, actual);
+        Assert.assertEquals(expected, actual);
     }
 
     // Сумма выше порогового значения: кратная 1000
@@ -35,7 +36,7 @@ public class CashbackHackServiceTest {
         int expected = 1000;
         int actual = service.remain(5000);
 
-        Assertions.assertEquals(expected, actual);
+        Assert.assertEquals(expected, actual);
     }
 
     // Сумма равна пороговому значению
@@ -46,7 +47,7 @@ public class CashbackHackServiceTest {
         int expected = 0;
         int actual = service.remain(1000);
 
-        Assertions.assertEquals(expected, actual);
+        Assert.assertEquals(expected, actual);
     }
 
 }
