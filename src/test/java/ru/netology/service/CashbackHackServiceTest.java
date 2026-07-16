@@ -43,7 +43,7 @@ public class CashbackHackServiceTest {
     public void shouldCalculateRemainWithAmountEqualsBoundary() {
         CashbackHackService service = new CashbackHackService();
 
-        int expected = 1000;
+        int expected = 0;
         int actual = service.remain(1000);
 
         Assertions.assertEquals(expected, actual);
